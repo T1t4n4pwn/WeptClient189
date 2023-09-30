@@ -42,13 +42,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -75,8 +75,8 @@
     <LibraryPath>$(ProjectDir)third_party\detours;$(ProjectDir)third_party\vmp;D:\Program Files\OpenSSL-Win64\lib\VC\static;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)third_party\detours\include;$(ProjectDir)third_party\jvm\;$(ProjectDir)third_party\vmp\include;C:\Program Files\OpenSSL-Win64\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)third_party\detours;$(ProjectDir)third_party\vmp;C:\Program Files\OpenSSL-Win64\lib\VC\static;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)third_party\detours\include;$(ProjectDir)third_party\jvm\;$(ProjectDir)third_party\vmp\include;D:\Program Files\OpenSSL-Win64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)third_party\detours;$(ProjectDir)third_party\vmp;D:\Program Files\OpenSSL-Win64\lib\VC\static;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <VcpkgUseStatic>true</VcpkgUseStatic>
@@ -134,6 +134,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -178,7 +179,6 @@
     <ClCompile Include="imgui\imgui_widgets.cpp" />
     <ClCompile Include="Minecraft.cpp" />
     <ClCompile Include="OpenGlHK.cpp" />
-    <ClCompile Include="OwnImGui.cpp" />
     <ClCompile Include="TitanHook.h" />
     <ClCompile Include="utils.cpp" />
     <ClCompile Include="XAntiDebug\crc32.cpp" />
@@ -240,7 +240,6 @@
     <ClInclude Include="ntdll\ntdll.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="OpenGlHK.h" />
-    <ClInclude Include="OwnImGui.h" />
     <ClInclude Include="PlayerControllerMP.h" />
     <ClInclude Include="MovingObjectPosition.h" />
     <ClInclude Include="Reach.h" />

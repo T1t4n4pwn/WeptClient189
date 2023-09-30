@@ -73,7 +73,6 @@ public:
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, "Connection: keep-alive");
-                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
                         std::string cookie = wept_cookie.toString();
@@ -119,10 +118,10 @@ public:
                         struct curl_slist* headers = NULL;
                         headers = curl_slist_append(headers, "User-Agent: WeptClient");
                         headers = curl_slist_append(headers, "Content-Type: application/json");
+                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, authorizationStr.c_str());
-                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
 
@@ -286,6 +285,7 @@ public:
                         Json::Reader reader;
 
                         if (!reader.parse(response, rspRoot)) {
+                                err_msg = "ÏìÓ¦°ü½âÎöÊ§°Ü";
                                 return false;
                         }
 

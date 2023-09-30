@@ -16,15 +16,15 @@ public:
 
 	void onEnable() override {
 		Menu::Open = true;
-		HWND sHwnd = gui.GetSelfWindowHWND();
-		SetWindowLong(sHwnd, GWL_EXSTYLE, WS_EX_LAYERED);
+		//HWND sHwnd = gui.GetSelfWindowHWND();
+		//SetWindowLong(sHwnd, GWL_EXSTYLE, WS_EX_LAYERED);
 
-		if (antiCapture->getValue()) {
-			SetWindowDisplayAffinity(sHwnd, WDA_EXCLUDEFROMCAPTURE);
-		}
-		else {
-			SetWindowDisplayAffinity(sHwnd, WDA_NONE);
-		}
+		//if (antiCapture->getValue()) {
+		//	SetWindowDisplayAffinity(sHwnd, WDA_EXCLUDEFROMCAPTURE);
+		//}
+		//else {
+		//	SetWindowDisplayAffinity(sHwnd, WDA_NONE);
+		//}
 
 	}
 
@@ -36,15 +36,15 @@ public:
 
 	void onDisable() override {
 		Menu::Open = false;
-		HWND sHwnd = gui.GetSelfWindowHWND();
-		SetWindowLong(sHwnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST);
+		//HWND sHwnd = gui.GetSelfWindowHWND();
+		//SetWindowLong(sHwnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST);
 
-		if (antiCapture->getValue()) {
-			SetWindowDisplayAffinity(sHwnd, WDA_EXCLUDEFROMCAPTURE);
-		}
-		else {
-			SetWindowDisplayAffinity(sHwnd, WDA_NONE);
-		}
+		//if (antiCapture->getValue()) {
+		//	SetWindowDisplayAffinity(sHwnd, WDA_EXCLUDEFROMCAPTURE);
+		//}
+		//else {
+		//	SetWindowDisplayAffinity(sHwnd, WDA_NONE);
+		//}
 	}
 
 

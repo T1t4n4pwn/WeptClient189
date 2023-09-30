@@ -139,9 +139,6 @@
     <ClCompile Include="utils.cpp">
       <Filter>TitanAwaken\Utils</Filter>
     </ClCompile>
-    <ClCompile Include="OwnImGui.cpp">
-      <Filter>TitanAwaken\Gui</Filter>
-    </ClCompile>
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="ClientUtils.cpp">
       <Filter>TitanAwaken\Utils</Filter>
@@ -243,9 +240,6 @@
     </ClInclude>
     <ClInclude Include="utils.h">
       <Filter>TitanAwaken\Utils</Filter>
-    </ClInclude>
-    <ClInclude Include="OwnImGui.h">
-      <Filter>TitanAwaken\Gui</Filter>
     </ClInclude>
     <ClInclude Include="WorldClient.h">
       <Filter>SDK\net\minecraft\client\multiplayer</Filter>

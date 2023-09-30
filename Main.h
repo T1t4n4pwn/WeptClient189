@@ -5,7 +5,6 @@
 
 #include "ModuleManager.h"
 #include "KeyBoard.h"
-#include "OwnImGui.h"
 #include "utils.h"
 
 #include "custom.hpp"
@@ -16,8 +15,6 @@ const char* kGVersion = "1.8.9";
 std::string clickGuiTitle;
 std::string authorName = "Author: T1t4n4pwn";
 std::string menuUnderlineText;
-
-inline OwnImGui gui("Menu");
 
 void DrawModValues(IModule* mod) {
 
@@ -248,22 +245,6 @@ void GuiCallBack() {
 
 }
 
-void GuiThread() {
-
-	clickGuiTitle.append(kName);
-	clickGuiTitle.append(" | ");
-	clickGuiTitle.append(kVersion);
-
-	menuUnderlineText.append(kName)
-		.append(" | ")
-		.append("Minecraft ")
-		.append(kGVersion);
-
-	WindowInfo info = GetWindowInfoByPID(GetCurrentProcessId());
-	
-	gui.Start(info.ClassName.c_str(), info.Caption.c_str(), GuiCallBack);
-}
-
 #include "Sprint.h"
 #include "ClickGui.h"
 #include "AimBot.h"
@@ -324,9 +305,19 @@ static int HackMain() {
 	
 
 	CreateThread(0, 0, (LPTHREAD_START_ROUTINE)KeyBoard::StartListen, 0, 0, 0);
-	//HANDLE hGuiThread = CreateThread(0, 0, (LPTHREAD_START_ROUTINE)GuiThread, 0, 0, 0);
-	//SetThreadPriority(hGuiThread, THREAD_PRIORITY_HIGHEST);
 	PlaceHookGL();
+
+	clickGuiTitle.append(kName);
+	clickGuiTitle.append(" | ");
+	clickGuiTitle.append(kVersion);
+
+	menuUnderlineText.append(kName)
+		.append(" | ")
+		.append("Minecraft ")
+		.append(kGVersion);
+
+	Menu::CallBackFunc = GuiCallBack;
+
 	manager->invokeAll();
 
 	return 0;

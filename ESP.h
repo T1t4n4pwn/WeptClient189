@@ -127,7 +127,7 @@ public:
 			Matrix projectionMatrix = ActiveRenderInfo::getProjection();
 
 
-			if(World2Screen(vecOrign, modelMatrix, projectionMatrix, gui.Window.Width, gui.Window.Height, screenPos)){
+			/*if(World2Screen(vecOrign, modelMatrix, projectionMatrix, gui.Window.Width, gui.Window.Height, screenPos)){
 
 
 				float bili = biliValue->getValue() / distance;
@@ -145,7 +145,7 @@ public:
 			}
 			else {
 				requests[i].Valid = false;
-			}
+			}*/
 
 			
 		}
@@ -163,7 +163,7 @@ public:
 			}
 
 			
-			gui.Rectangle(requests[i].Pos, requests[i].Rect.x, requests[i].Rect.y, requests[i].Color, requests[i].thickness);
+			//gui.Rectangle(requests[i].Pos, requests[i].Rect.x, requests[i].Rect.y, requests[i].Color, requests[i].thickness);
 		}
 
 	}

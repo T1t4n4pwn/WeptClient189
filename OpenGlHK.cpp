@@ -103,8 +103,39 @@ void Menu::SetupImgui()
 
 	Menu::Initialized = true;
 }
+static bool state = false;
+void setStateFullScreen() {
+	
+	if (state)
+	{
+		return;
+	}
+	state = true;
+	Menu::Open = false;
+	Menu::Unhook_wndProc();
+	wglMakeCurrent(Menu::HandleDeviceContext, Menu::OriginalGLContext);
+	wglDeleteContext(Menu::MenuGLContext);
+	ImGui::DestroyContext();
+	
+	Menu::Hook_wndProc();
+	Menu::SetupImgui();
+}
 
+void setStateUnFull() {
+	if (!state)
+	{
+		return;
+	}
+	state = false;
+	Menu::Open = false;
+	Menu::Unhook_wndProc();
+	wglMakeCurrent(Menu::HandleDeviceContext, Menu::OriginalGLContext);
+	wglDeleteContext(Menu::MenuGLContext);
+	ImGui::DestroyContext();
 
+	Menu::Hook_wndProc();
+	Menu::SetupImgui();
+}
 #include "ModuleManager.h"
 bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 {
@@ -112,13 +143,29 @@ bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 	Menu::HandleWindow = WindowFromDC(hdc);
 	Menu::OriginalGLContext = wglGetCurrentContext();
 
+
+	RECT windowRect;
+	GetWindowRect(Menu::HandleWindow, &windowRect);
+
+	int windowWidth = windowRect.right - windowRect.left;
+	int windowHeight = windowRect.bottom - windowRect.top;
+
+	bool isFullScreen = (windowWidth == GetSystemMetrics(SM_CXSCREEN) && windowHeight == GetSystemMetrics(SM_CYSCREEN));
+	if (isFullScreen)
+	{
+		setStateFullScreen();
+	}
+	else {
+		setStateUnFull();
+	}
+	std::cout << isFullScreen << std::endl;
 	std::call_once(setupFlag, [&] {
 		Menu::Hook_wndProc();
 		Menu::SetupImgui();
 		});
 	glDepthFunc(GL_LEQUAL);
 
-
+	state = isFullScreen;
 
 	wglMakeCurrent(Menu::HandleDeviceContext, Menu::MenuGLContext);
 	//glDepthFunc(GL_LEQUAL);
@@ -172,7 +219,7 @@ bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 			mod->onRender();
 		}
 	}
-	
+	ImGui::End();
 	ImGui::EndFrame();
 
 	ImGui::Render();

@@ -6,6 +6,7 @@
 #include <Shlobj.h>
 #include "imgui/imgui_impl_opengl2.h"
 #include "imgui/imgui_impl_win32.h"
+
 typedef bool(*template_wglSwapBuffers) (HDC hdc);
 template_wglSwapBuffers original_wglSwapBuffers;
 TitanHook<template_wglSwapBuffers> OPENGL_Hook;
@@ -182,7 +183,11 @@ bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 
 	if (Menu::Open)
 	{
-		//GuiCallBack();
+		ImGui::Begin("OpenGL-Hk");
+		{
+			ImGui::Text("Hello, World!");
+		}
+		ImGui::End();
 		
 	}
 	else
@@ -213,6 +218,7 @@ bool PlaceHookGL() {
 		wglSwapBuffers = (LPVOID)GetProcAddress(GetModuleHandle("opengl32.dll"), "wglSwapBuffers");
 	}
 	original_wglSwapBuffers = (template_wglSwapBuffers)wglSwapBuffers;
-	//OPENGL_Hook.InitHook()
+	OPENGL_Hook.InitHook(original_wglSwapBuffers, hook_wglSwapBuffers);
+	OPENGL_Hook.SetHook();
 	return true;
 }

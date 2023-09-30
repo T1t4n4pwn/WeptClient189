@@ -10,7 +10,15 @@
 class Entity : public Object {
 public:
 	using Object::Object;
-
+	Vector2 getAngles()
+	{
+		return Vector2(getRotationYaw(), getRotationPitch());
+	}
+	void setAngles(Vector2 angles)
+	{
+		g_env->SetFloatField(this->obj(), forgeCache.FindFieldCache("Entity::rotationYaw") , angles.X);
+		g_env->SetFloatField(this->obj(), forgeCache.FindFieldCache("Entity::rotationPitch") , angles.Y);
+	};
 	bool isInvisible() const {
 		jmethodID methodID = forgeCache.FindMethodCache("Entity::isInvisible");
 		if (methodID == 0) {

@@ -176,6 +176,9 @@
     <ClCompile Include="OpenGlHK.cpp">
       <Filter>TitanAwaken\Gui</Filter>
     </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Minecraft.h">
@@ -394,6 +397,12 @@
     </ClInclude>
     <ClInclude Include="OpenGlHK.h">
       <Filter>TitanAwaken\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="geometry.h">
+      <Filter>TitanAwaken\Utils</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

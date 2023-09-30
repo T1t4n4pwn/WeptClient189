@@ -8,6 +8,10 @@ class EntityLivingBase : public Entity {
 public:
 	using Entity::Entity;
 
+	bool canEntityBeSeen(jobject entity)
+	{
+		return g_env->CallBooleanMethod(this->obj(), forgeCache.FindMethodCache("EntityLivingBase::canEntityBeSeen"), entity);
+	}
 	float getHealth() const {
 		
 		jmethodID methodID = forgeCache.FindMethodCache("EntityLivingBase::getHealth");

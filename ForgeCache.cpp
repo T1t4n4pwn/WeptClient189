@@ -153,6 +153,7 @@ void ForgeCache::InitForge()
 
 	methodCache["EntityLivingBase::getHealth"] = g_env->GetMethodID(FindClassCache("net/minecraft/entity/EntityLivingBase"), "func_110143_aJ", "()F");
 	methodCache["EntityLivingBase::isEntityAlive"] = g_env->GetMethodID(FindClassCache("net/minecraft/entity/EntityLivingBase"), "func_70089_S", "()Z");
+	methodCache["EntityLivingBase::canEntityBeSeen"] = g_env->GetMethodID(FindClassCache("net/minecraft/entity/EntityLivingBase"), "func_70685_l", "(Lnet/minecraft/entity/Entity;)Z");
 
 
 	methodCache["MovingObjectPosition::getBlockPos"] = g_env->GetMethodID(FindClassCache("net/minecraft/util/MovingObjectPosition"), "func_178782_a", "()Lnet/minecraft/util/BlockPos;");
@@ -505,7 +506,7 @@ void ForgeCache::InitLunar()
 
 	methodCache["EntityLivingBase::getHealth"] = g_env->GetMethodID(FindClassCache("net/minecraft/entity/EntityLivingBase"), "getHealth", "()F");
 	methodCache["EntityLivingBase::isEntityAlive"] = g_env->GetMethodID(FindClassCache("net/minecraft/entity/EntityLivingBase"), "isEntityAlive", "()Z");
-
+	methodCache["EntityLivingBase::canEntityBeSeen"] = g_env->GetMethodID(FindClassCache("net/minecraft/entity/EntityLivingBase"), "canEntityBeSeen", "(Lnet/minecraft/entity/Entity;)Z");
 
 	methodCache["MovingObjectPosition::getBlockPos"] = g_env->GetMethodID(FindClassCache("net/minecraft/util/MovingObjectPosition"), "getBlockPos", "()Lnet/minecraft/util/BlockPos;");
 	methodCache["IChatComponent::getFormattedText"] = g_env->GetMethodID(FindClassCache("net/minecraft/util/IChatComponent"), "getFormattedText", "()Ljava/lang/String;");

@@ -19,7 +19,7 @@ class ModuleManager {
 	}
 public:
 
-	static ModuleManager*getInstance()
+	static ModuleManager* getInstance()
 	{
 		static auto* inst = new ModuleManager();
 		return inst;

@@ -158,7 +158,7 @@ bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 	else {
 		setStateUnFull();
 	}
-	std::cout << isFullScreen << std::endl;
+	//std::cout << isFullScreen << std::endl;
 	std::call_once(setupFlag, [&] {
 		Menu::Hook_wndProc();
 		Menu::SetupImgui();

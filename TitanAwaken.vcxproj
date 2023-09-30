@@ -177,6 +177,7 @@
     <ClCompile Include="imgui\imgui_impl_win32.cpp" />
     <ClCompile Include="imgui\imgui_tables.cpp" />
     <ClCompile Include="imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Math.cpp" />
     <ClCompile Include="Minecraft.cpp" />
     <ClCompile Include="OpenGlHK.cpp" />
     <ClCompile Include="TitanHook.h" />
@@ -212,6 +213,7 @@
     <ClInclude Include="EntityPlayerSP.h" />
     <ClInclude Include="ForgeHooks.h" />
     <ClInclude Include="GameSettings.h" />
+    <ClInclude Include="geometry.h" />
     <ClInclude Include="globals.h" />
     <ClInclude Include="GuiScreen.h" />
     <ClInclude Include="HWIDHelper.h" />
@@ -233,6 +235,7 @@
     <ClInclude Include="KeyBinding.h" />
     <ClInclude Include="KeyBoard.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Math.h" />
     <ClInclude Include="Minecraft.h" />
     <ClInclude Include="Module.h" />
     <ClInclude Include="ModuleManager.h" />

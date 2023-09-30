@@ -5,6 +5,14 @@
 class RenderManager : public Object {
 public:
 	using Object::Object;
+	Vector3 getRenderPos()
+	{
+		return Vector3{
+			(float)(double)g_env->GetDoubleField(this->obj(), forgeCache.FindFieldCache("RenderManager::renderPosX")),
+			(float)(double)g_env->GetDoubleField(this->obj(), forgeCache.FindFieldCache("RenderManager::renderPosY")),
+			(float)(double)g_env->GetDoubleField(this->obj(), forgeCache.FindFieldCache("RenderManager::renderPosZ"))
+		};
+	}
 
 	double getRenderPosX() {
 	

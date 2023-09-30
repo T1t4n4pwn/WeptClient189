@@ -35,6 +35,16 @@ public:
 		return eyeHeight;
 	}
 
+	Vector3 getEyePos()
+	{
+		Vector3 pos = getPos();
+		return Vector3{
+			pos.X,
+			(float)(double)(pos.Y + (this->getHeight() * 0.85)),
+			pos.Z
+		};
+	}
+
 	bool isPlayerSleeping() {
 		
 		jmethodID methodID = forgeCache.FindMethodCache("EntityPlayer::isPlayerSleeping");

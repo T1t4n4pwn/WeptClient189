@@ -10,7 +10,8 @@ public:
         X = x;
         Y = y;
     }
-
+    Vector2 operator - (const Vector2& rhs) const { return Vector2(X - rhs.X, Y - rhs.Y); }
+    Vector2 Invert() const { return Vector2{ -X, -Y }; }
     Vector2& operator*(const Vector2& obj) {
         X *= obj.X;
         Y *= obj.Y;

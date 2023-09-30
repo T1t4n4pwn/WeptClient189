@@ -151,7 +151,7 @@ void LoginVerify() {
 
 DWORD WINAPI StartHack(LPVOID args) {
 
-    LoginVerify();
+    //LoginVerify();
 
     VMProtectBegin("StartHack");
 

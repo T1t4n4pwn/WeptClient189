@@ -10,7 +10,7 @@ public:
 	{
 		while (true)
 		{
-			ModuleManager* mgr = ModuleManager::getInstance();
+			ModuleManager mgr = ModuleManager::getInstance();
 			for (size_t i = 0; i < mgr->getNumberOfModule(); i++)
 			{
 				IModule* crtMod = mgr->getModuleByIndex(i);

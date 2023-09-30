@@ -6,7 +6,6 @@
 #include <Shlobj.h>
 #include "imgui/imgui_impl_opengl2.h"
 #include "imgui/imgui_impl_win32.h"
-
 typedef bool(*template_wglSwapBuffers) (HDC hdc);
 template_wglSwapBuffers original_wglSwapBuffers;
 TitanHook<template_wglSwapBuffers> OPENGL_Hook;
@@ -104,6 +103,9 @@ void Menu::SetupImgui()
 
 	Menu::Initialized = true;
 }
+
+
+#include "ModuleManager.h"
 bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 {
 	Menu::HandleDeviceContext = hdc;
@@ -124,21 +126,23 @@ bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
-	ImGui::PushFont(if_icons);
-	ImGui::PushFont(if_tahoma);
+	
 
 
 	if (Menu::Open)
 	{
 
 		if (Menu::CallBackFunc) {
+			ImGui::PushFont(if_icons);
+			ImGui::PushFont(if_tahoma);
 			Menu::CallBackFunc();
+			ImGui::PopFont();
+			ImGui::PopFont();
 		}
 		
 	}
 	else
 	{
-		// checking if originalClip is valid
 		if (originalClip.right > originalClip.left && originalClip.bottom > originalClip.top)
 		{
 			ClipCursor(&originalClip);
@@ -148,9 +152,27 @@ bool __stdcall hook_wglSwapBuffers(_In_ HDC hdc)
 
 	ImGui::SetNextWindowPos(ImVec2(0, 0));
 	ImGui::SetNextWindowSize(ImGui::GetIO().DisplaySize);
+	ImGui::Begin("Overlay", nullptr,
+		ImGuiWindowFlags_NoTitleBar |
+		ImGuiWindowFlags_NoResize |
+		ImGuiWindowFlags_NoMove |
+		ImGuiWindowFlags_NoScrollbar |
+		ImGuiWindowFlags_NoSavedSettings |
+		ImGuiWindowFlags_NoInputs |
+		ImGuiWindowFlags_NoFocusOnAppearing |
+		ImGuiWindowFlags_NoBringToFrontOnFocus |
+		ImGuiWindowFlags_NoBackground);
 
-	ImGui::PopFont();
-	ImGui::PopFont();
+	ModuleManager* pManager = ModuleManager::getInstance();
+
+	for (size_t i = 0; i < pManager->getNumberOfModule(); i++)
+	{
+		IModule* mod = pManager->getModuleByIndex(i);
+		if (mod->isEnable()) {
+			mod->onRender();
+		}
+	}
+	
 	ImGui::EndFrame();
 
 	ImGui::Render();

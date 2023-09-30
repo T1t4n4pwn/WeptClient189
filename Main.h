@@ -57,17 +57,8 @@ void GuiCallBack() {
 
 	ModuleManager* pManager = ModuleManager::getInstance();
 
-	for (size_t i = 0; i < pManager->getNumberOfModule(); i++)
-	{
-		IModule* mod = pManager->getModuleByIndex(i);
-		if (mod->isEnable()) {
-			mod->onRender();
-		}
-	}
-
 	IModule* clickGUI = pManager->getModuleByName("ClickGui");
 	if (!clickGUI->isEnable()) { return; }
-
 	ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(0, 0));
 	ImGui::PushStyleVar(ImGuiStyleVar_WindowMinSize, ImVec2(510, 380));
 	ImGui::Begin(clickGuiTitle.c_str(), NULL, ImGuiWindowFlags_NoTitleBar  | ImGuiWindowFlags_NoCollapse);
@@ -258,14 +249,14 @@ void GuiCallBack() {
 
 static int HackMain() {
 
-	Wept wept;
+	/*Wept wept;
 	std::string version = wept.get_version();
 	if (version.compare(kVersion) != 0) {
 		std::cout << "当前版本: " << kVersion << " | " << "最新版本: " << version << std::endl;
 		std::cout << "版本过期， 请更新到最新版" << std::endl;
 		getchar();
 		return -1;
-	}
+	}*/
 
 	while (!hasInitialize) {
 		Sleep(100);

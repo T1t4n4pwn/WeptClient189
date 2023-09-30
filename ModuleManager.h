@@ -17,17 +17,12 @@ class ModuleManager {
 	~ModuleManager() {
 
 	}
-	static ModuleManager* instance;
 public:
 
-	static ModuleManager* getInstance()
+	static ModuleManager*getInstance()
 	{
-		if (instance)
-		{
-			return instance;
-		}
-		instance = new ModuleManager;
-		return instance;
+		static auto* inst = new ModuleManager();
+		return inst;
 	}
 
 	void addModule(IModule* mod)
@@ -114,5 +109,3 @@ public:
 
 
 };
-
-ModuleManager* ModuleManager::instance = nullptr;

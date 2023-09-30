@@ -135,7 +135,6 @@ void OwnImGui::WindowMessageCycle(CallBack MainFunction)
     ::UnregisterClass(W_class.lpszClassName, W_class.hInstance);
     Clean = true;
 }
-#include "bytes.hpp"
 void OwnImGui::Initialize()
 {
     ImGui::CreateContext();
@@ -171,7 +170,7 @@ void OwnImGui::Initialize()
     font_config.GlyphRanges = ranges;
 
     io.Fonts->AddFontFromFileTTF("C:\\Windows\\Fonts\\tahoma.ttf", 14, &font_config, ranges);
-    io.Fonts->AddFontFromMemoryTTF(icons_binary, sizeof icons_binary, 15, &font_config, ranges);
+    //io.Fonts->AddFontFromMemoryTTF(icons_binary, sizeof icons_binary, 15, &font_config, ranges);
 
     // Setup backends
     ImGui_ImplWin32_Init(this->Window.hMyWindow);

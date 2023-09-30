@@ -73,6 +73,7 @@ public:
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, "Connection: keep-alive");
+                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
                         std::string cookie = wept_cookie.toString();
@@ -121,7 +122,7 @@ public:
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, authorizationStr.c_str());
-
+                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
 
@@ -264,6 +265,7 @@ public:
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, "Connection: keep-alive");
+
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
 
@@ -346,7 +348,7 @@ public:
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, authorizationStr.c_str());
-
+                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
 
@@ -432,7 +434,7 @@ public:
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, authorizationStr.c_str());
-
+                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
 
@@ -498,7 +500,7 @@ public:
                         headers = curl_slist_append(headers, "Accept: */*");
                         headers = curl_slist_append(headers, "Host: api.wept.buzz");
                         headers = curl_slist_append(headers, authorizationStr.c_str());
-
+                        headers = curl_slist_append(headers, "Connection: keep-alive");
                         curl_easy_setopt(curl, CURLOPT_HTTPHEADER, headers);
 
 

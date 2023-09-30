@@ -173,6 +173,12 @@
     <ClCompile Include="eydata\w3c.cpp">
       <Filter>eydata</Filter>
     </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_opengl2.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="OpenGlHK.cpp">
+      <Filter>TitanAwaken\Gui</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Minecraft.h">
@@ -215,9 +221,6 @@
       <Filter>TitanAwaken</Filter>
     </ClInclude>
     <ClInclude Include="ModuleManager.h">
-      <Filter>TitanAwaken</Filter>
-    </ClInclude>
-    <ClInclude Include="KeyBoard.h">
       <Filter>TitanAwaken</Filter>
     </ClInclude>
     <ClInclude Include="Sprint.h">
@@ -388,6 +391,15 @@
     </ClInclude>
     <ClInclude Include="ini.h">
       <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBoard.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_opengl2.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="OpenGlHK.h">
+      <Filter>TitanAwaken\Gui</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

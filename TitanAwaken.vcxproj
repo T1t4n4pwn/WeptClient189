@@ -42,13 +42,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>MultiByte</CharacterSet>
   </PropertyGroup>
@@ -75,8 +75,8 @@
     <LibraryPath>$(ProjectDir)third_party\detours;$(ProjectDir)third_party\vmp;D:\Program Files\OpenSSL-Win64\lib\VC\static;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(ProjectDir)third_party\detours\include;$(ProjectDir)third_party\jvm\;$(ProjectDir)third_party\vmp\include;D:\Program Files\OpenSSL-Win64\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)third_party\detours;$(ProjectDir)third_party\vmp;D:\Program Files\OpenSSL-Win64\lib\VC\static;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)third_party\detours\include;$(ProjectDir)third_party\jvm\;$(ProjectDir)third_party\vmp\include;C:\Program Files\OpenSSL-Win64\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)third_party\detours;$(ProjectDir)third_party\vmp;C:\Program Files\OpenSSL-Win64\lib\VC\static;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <VcpkgUseStatic>true</VcpkgUseStatic>
@@ -156,6 +156,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableUAC>false</EnableUAC>
       <UACExecutionLevel>RequireAdministrator</UACExecutionLevel>
+      <AdditionalDependencies>opengl32.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -171,10 +172,12 @@
     <ClCompile Include="imgui\imgui_draw.cpp" />
     <ClCompile Include="imgui\imgui_impl_dx11.cpp" />
     <ClCompile Include="imgui\imgui_impl_dx9.cpp" />
+    <ClCompile Include="imgui\imgui_impl_opengl2.cpp" />
     <ClCompile Include="imgui\imgui_impl_win32.cpp" />
     <ClCompile Include="imgui\imgui_tables.cpp" />
     <ClCompile Include="imgui\imgui_widgets.cpp" />
     <ClCompile Include="Minecraft.cpp" />
+    <ClCompile Include="OpenGlHK.cpp" />
     <ClCompile Include="OwnImGui.cpp" />
     <ClCompile Include="TitanHook.h" />
     <ClCompile Include="utils.cpp" />
@@ -216,6 +219,7 @@
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_impl_dx11.h" />
     <ClInclude Include="imgui\imgui_impl_dx9.h" />
+    <ClInclude Include="imgui\imgui_impl_opengl2.h" />
     <ClInclude Include="imgui\imgui_impl_win32.h" />
     <ClInclude Include="imgui\imgui_internal.h" />
     <ClInclude Include="imgui\imstb_rectpack.h" />
@@ -235,6 +239,7 @@
     <ClInclude Include="Mouse.h" />
     <ClInclude Include="ntdll\ntdll.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="OpenGlHK.h" />
     <ClInclude Include="OwnImGui.h" />
     <ClInclude Include="PlayerControllerMP.h" />
     <ClInclude Include="MovingObjectPosition.h" />

@@ -1,10 +1,10 @@
-#pragma once
+#pragma 
+#define IMGUI_DEFINE_MATH_OPERATORS
 #include "globals.h"
 #include <Windows.h>
 
 #include "ModuleManager.h"
 #include "KeyBoard.h"
-#define  IMGUI_DEFINE_MATH_OPERATORS
 #include "OwnImGui.h"
 #include "utils.h"
 
@@ -54,6 +54,7 @@ void DrawModValues(IModule* mod) {
 }
 
 #include "custom.hpp"
+
 
 void GuiCallBack() {
 
@@ -271,7 +272,7 @@ void GuiThread() {
 #include "TestMod.h"
 #include "AutoClicker.h"
 #include "Teams.h"
-
+#include "OpenGlHK.h"
 #include "Wetp.h"
 
 static int HackMain() {
@@ -323,8 +324,9 @@ static int HackMain() {
 	
 
 	CreateThread(0, 0, (LPTHREAD_START_ROUTINE)KeyBoard::StartListen, 0, 0, 0);
-	HANDLE hGuiThread = CreateThread(0, 0, (LPTHREAD_START_ROUTINE)GuiThread, 0, 0, 0);
-	SetThreadPriority(hGuiThread, THREAD_PRIORITY_HIGHEST);
+	//HANDLE hGuiThread = CreateThread(0, 0, (LPTHREAD_START_ROUTINE)GuiThread, 0, 0, 0);
+	//SetThreadPriority(hGuiThread, THREAD_PRIORITY_HIGHEST);
+	PlaceHookGL();
 	manager->invokeAll();
 
 	return 0;

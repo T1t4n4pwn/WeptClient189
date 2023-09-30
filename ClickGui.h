@@ -2,6 +2,7 @@
 #include "globals.h"
 #include "Module.h"
 #include "Minecraft.h"
+#include "OpenGlHK.h"
 
 class ClickGui : public IModule {
 public:
@@ -14,6 +15,7 @@ public:
 	}
 
 	void onEnable() override {
+		Menu::Open = true;
 		HWND sHwnd = gui.GetSelfWindowHWND();
 		SetWindowLong(sHwnd, GWL_EXSTYLE, WS_EX_LAYERED);
 
@@ -33,6 +35,7 @@ public:
 	}
 
 	void onDisable() override {
+		Menu::Open = false;
 		HWND sHwnd = gui.GetSelfWindowHWND();
 		SetWindowLong(sHwnd, GWL_EXSTYLE, WS_EX_LAYERED | WS_EX_TRANSPARENT | WS_EX_TOPMOST);
 

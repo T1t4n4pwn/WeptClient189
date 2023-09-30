@@ -222,7 +222,7 @@ BOOL APIENTRY DllMain( HMODULE hModule,
     case DLL_PROCESS_ATTACH:
         DisableThreadLibraryCalls(hModule);
 
-        antiDbg.XAD_Initialize();
+        //antiDbg.XAD_Initialize();
 
         //XHideDll::HideInLoadOrderLinks(hModule);
         //XHideDll::HideInMemoryOrderLinks(hModule);

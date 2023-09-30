@@ -1,0 +1,393 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="SDK">
+      <UniqueIdentifier>{b9b2fd32-e9aa-4fbc-b0f9-4699a9e29342}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net">
+      <UniqueIdentifier>{fc671122-2ded-47b3-a268-edf40ef508a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft">
+      <UniqueIdentifier>{09db5ec4-3d86-4cb4-a42c-09cfee03b81f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\client">
+      <UniqueIdentifier>{4b669b23-e9ce-4c47-8651-c14283186a8e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\client\entity">
+      <UniqueIdentifier>{bd0cb0d9-8f9c-44bc-bdf2-a2c0f5cf37b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\entity">
+      <UniqueIdentifier>{483e63c9-450b-4667-9b23-f239984890ea}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="imgui">
+      <UniqueIdentifier>{67c9f017-c47e-4846-a61d-65748bf46ae3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken">
+      <UniqueIdentifier>{5aaf2f66-6bd3-40b1-953c-6da136a5d5f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Utils">
+      <UniqueIdentifier>{53072bc9-1fa7-488a-8741-cceed4147cac}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Modules">
+      <UniqueIdentifier>{b7132415-09c5-429f-9a33-b0a4d7d45fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Modules\Combat">
+      <UniqueIdentifier>{2d3f1f76-e498-42f3-8fd6-8f8a68c7847a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Modules\Movement">
+      <UniqueIdentifier>{d633d971-c4d6-44cf-8172-537c15b6e4c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Modules\Render">
+      <UniqueIdentifier>{7b62edbc-ad32-45d9-8554-55f79030d3e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Gui">
+      <UniqueIdentifier>{56fe1ad0-1efd-47f0-b491-27906c080b96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\client\multiplayer">
+      <UniqueIdentifier>{4a4bf620-56f4-44d7-82a1-5b9917a59943}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\world">
+      <UniqueIdentifier>{80a2df53-c90c-4939-acc4-9d1f8848e0a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\entity\player">
+      <UniqueIdentifier>{39fe7033-cb06-4234-949c-7e82c3df320c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\item">
+      <UniqueIdentifier>{7e339ca1-5748-43af-9d0c-6f0695a1a933}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\client\renderer">
+      <UniqueIdentifier>{8a1afac7-76ce-4779-bd7f-22cb9ac503b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\util">
+      <UniqueIdentifier>{80d2435b-a9a7-4ed8-9374-1ce5ff88c51b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ntdll">
+      <UniqueIdentifier>{3eead563-1b4f-43d2-8642-db885c1bfcb5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\client\renderer\entity">
+      <UniqueIdentifier>{912acd5d-a5db-418b-983a-f13b76d3b137}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\org">
+      <UniqueIdentifier>{05ba732a-e0f9-4b5c-807f-b66257ff83f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\org\lwjgl">
+      <UniqueIdentifier>{032c3280-a4e9-4a9b-928d-db03426437c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\org\lwjgl\input">
+      <UniqueIdentifier>{735ba67d-cbe7-44f6-ae7e-444aca2e1d68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XAntiDebug">
+      <UniqueIdentifier>{b721ac73-246b-4e4b-8aaf-75f85464aa96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraftforge">
+      <UniqueIdentifier>{36364e12-9ae5-4d5b-8c56-5fdd60a91d32}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraftforge\common">
+      <UniqueIdentifier>{30d384e9-8eb4-4777-84cc-cd0f2019c086}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Modules\Misc">
+      <UniqueIdentifier>{299d1636-c114-4b48-b52f-50ae3272fcd6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\client\gui">
+      <UniqueIdentifier>{c3318552-df99-4956-a065-a18ab7779e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="eydata">
+      <UniqueIdentifier>{38aff87d-7425-4081-a007-36da218a0d17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SDK\net\minecraft\client\settings">
+      <UniqueIdentifier>{7db6c26f-554a-485c-98e3-c44cd47453fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TitanAwaken\Utils\Verify">
+      <UniqueIdentifier>{000e1a0c-0ff0-4237-8879-30eb54c16b69}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="imgui\imgui.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_demo.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_draw.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx11.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_win32.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_tables.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_widgets.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="ForgeCache.cpp">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="globals.cpp">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="TitanHook.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="utils.cpp">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="OwnImGui.cpp">
+      <Filter>TitanAwaken\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="ClientUtils.cpp">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="Minecraft.cpp">
+      <Filter>SDK\net\minecraft\client</Filter>
+    </ClCompile>
+    <ClCompile Include="XHideDll.cpp">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClCompile>
+    <ClCompile Include="custom.cpp">
+      <Filter>TitanAwaken\Gui</Filter>
+    </ClCompile>
+    <ClCompile Include="imgui\imgui_impl_dx9.cpp">
+      <Filter>imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="XAntiDebug\crc32.cpp">
+      <Filter>XAntiDebug</Filter>
+    </ClCompile>
+    <ClCompile Include="XAntiDebug\ldasm.cpp">
+      <Filter>XAntiDebug</Filter>
+    </ClCompile>
+    <ClCompile Include="XAntiDebug\XAntiDebug.cpp">
+      <Filter>XAntiDebug</Filter>
+    </ClCompile>
+    <ClCompile Include="eydata\base64.cpp">
+      <Filter>eydata</Filter>
+    </ClCompile>
+    <ClCompile Include="eydata\w3c.cpp">
+      <Filter>eydata</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Minecraft.h">
+      <Filter>SDK\net\minecraft\client</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>SDK\net\minecraft\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityLivingBase.h">
+      <Filter>SDK\net\minecraft\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="AbstractClientPlayer.h">
+      <Filter>SDK\net\minecraft\client\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imconfig.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx11.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_win32.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_internal.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_rectpack.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_textedit.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imstb_truetype.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Module.h">
+      <Filter>TitanAwaken</Filter>
+    </ClInclude>
+    <ClInclude Include="ModuleManager.h">
+      <Filter>TitanAwaken</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBoard.h">
+      <Filter>TitanAwaken</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprint.h">
+      <Filter>TitanAwaken\Modules\Movement</Filter>
+    </ClInclude>
+    <ClInclude Include="Value.h">
+      <Filter>TitanAwaken</Filter>
+    </ClInclude>
+    <ClInclude Include="ClickGui.h">
+      <Filter>TitanAwaken\Modules\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="ForgeCache.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="globals.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>TitanAwaken</Filter>
+    </ClInclude>
+    <ClInclude Include="utils.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="OwnImGui.h">
+      <Filter>TitanAwaken\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="WorldClient.h">
+      <Filter>SDK\net\minecraft\client\multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="World.h">
+      <Filter>SDK\net\minecraft\world</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPlayerSP.h">
+      <Filter>SDK\net\minecraft\client\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="EntityPlayer.h">
+      <Filter>SDK\net\minecraft\entity\player</Filter>
+    </ClInclude>
+    <ClInclude Include="ClientUtils.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="TestMod.h">
+      <Filter>TitanAwaken\Modules\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="AimBot.h">
+      <Filter>TitanAwaken\Modules\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoClicker.h">
+      <Filter>TitanAwaken\Modules\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="TimerUtil.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemStack.h">
+      <Filter>SDK\net\minecraft\item</Filter>
+    </ClInclude>
+    <ClInclude Include="Item.h">
+      <Filter>SDK\net\minecraft\item</Filter>
+    </ClInclude>
+    <ClInclude Include="Object.h">
+      <Filter>SDK\net\minecraft</Filter>
+    </ClInclude>
+    <ClInclude Include="ESP.h">
+      <Filter>TitanAwaken\Modules\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="ActiveRenderInfo.h">
+      <Filter>SDK\net\minecraft\client\renderer</Filter>
+    </ClInclude>
+    <ClInclude Include="Reach.h">
+      <Filter>TitanAwaken\Modules\Combat</Filter>
+    </ClInclude>
+    <ClInclude Include="Structures.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="XHideDll.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="ntdll\ntdll.h">
+      <Filter>ntdll</Filter>
+    </ClInclude>
+    <ClInclude Include="JNIHelper.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+    <ClInclude Include="bytes.hpp">
+      <Filter>TitanAwaken\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="custom.hpp">
+      <Filter>TitanAwaken\Gui</Filter>
+    </ClInclude>
+    <ClInclude Include="imgui\imgui_impl_dx9.h">
+      <Filter>imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="RenderManager.h">
+      <Filter>SDK\net\minecraft\client\renderer\entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>SDK\net\minecraft\util</Filter>
+    </ClInclude>
+    <ClInclude Include="Mouse.h">
+      <Filter>SDK\org\lwjgl\input</Filter>
+    </ClInclude>
+    <ClInclude Include="XAntiDebug\CMemPtr.h">
+      <Filter>XAntiDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="XAntiDebug\crc32.h">
+      <Filter>XAntiDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="XAntiDebug\ldasm.h">
+      <Filter>XAntiDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="XAntiDebug\XAntiDebug.h">
+      <Filter>XAntiDebug</Filter>
+    </ClInclude>
+    <ClInclude Include="EnumFacing.h">
+      <Filter>SDK\net\minecraft\util</Filter>
+    </ClInclude>
+    <ClInclude Include="PlayerControllerMP.h">
+      <Filter>SDK\net\minecraft\client\multiplayer</Filter>
+    </ClInclude>
+    <ClInclude Include="ForgeHooks.h">
+      <Filter>SDK\net\minecraftforge\common</Filter>
+    </ClInclude>
+    <ClInclude Include="Teams.h">
+      <Filter>TitanAwaken\Modules\Misc</Filter>
+    </ClInclude>
+    <ClInclude Include="GuiScreen.h">
+      <Filter>SDK\net\minecraft\client\gui</Filter>
+    </ClInclude>
+    <ClInclude Include="eydata\base64.h">
+      <Filter>eydata</Filter>
+    </ClInclude>
+    <ClInclude Include="eydata\w3c.h">
+      <Filter>eydata</Filter>
+    </ClInclude>
+    <ClInclude Include="HWIDHelper.h" />
+    <ClInclude Include="AxisAlignedBB.h">
+      <Filter>SDK\net\minecraft\util</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockPos.h">
+      <Filter>SDK\net\minecraft\util</Filter>
+    </ClInclude>
+    <ClInclude Include="MovingObjectPosition.h">
+      <Filter>SDK\net\minecraft\util</Filter>
+    </ClInclude>
+    <ClInclude Include="IChatComponent.h">
+      <Filter>SDK\net\minecraft\util</Filter>
+    </ClInclude>
+    <ClInclude Include="KeyBinding.h">
+      <Filter>SDK\net\minecraft\client\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="GameSettings.h">
+      <Filter>SDK\net\minecraft\client\settings</Filter>
+    </ClInclude>
+    <ClInclude Include="Wetp.h">
+      <Filter>TitanAwaken\Utils\Verify</Filter>
+    </ClInclude>
+    <ClInclude Include="AESUtils.h">
+      <Filter>TitanAwaken\Utils\Verify</Filter>
+    </ClInclude>
+    <ClInclude Include="Base64Utils.h">
+      <Filter>TitanAwaken\Utils\Verify</Filter>
+    </ClInclude>
+    <ClInclude Include="Crypt.h">
+      <Filter>TitanAwaken\Utils\Verify</Filter>
+    </ClInclude>
+    <ClInclude Include="Encode.h">
+      <Filter>TitanAwaken\Utils\Verify</Filter>
+    </ClInclude>
+    <ClInclude Include="ini.h">
+      <Filter>TitanAwaken\Utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -7,4 +7,5 @@
 #### 若有哪些功能有问题请自行修复！
 
 ## 本项目使用了第三方库
-### 如Xjun师傅(https://github.com/strivexjun/strivexjun)的XHideDLL、XAntiDebug
+### 如Xjun师傅的XHideDLL、XAntiDebug
+#### Xjun师傅的主页请看: https://github.com/strivexjun/strivexjun

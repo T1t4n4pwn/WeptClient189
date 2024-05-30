@@ -5,3 +5,6 @@
 #### 此项目在很久之前写的，很长时间没有维护。
 #### 某些功能有问题，甚至是未完成， 且是突然停止的(因为某些个人原因)
 #### 若有哪些功能有问题请自行修复！
+
+## 本项目使用了第三方库
+### 如Xjun师傅(https://github.com/strivexjun/strivexjun)的XHideDLL、XAntiDebug
